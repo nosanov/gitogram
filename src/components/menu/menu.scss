@@ -1,0 +1,31 @@
+.menu {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    &:first-child {
+      margin-right: 28px;
+    }
+    &:nth-child(2) {
+      margin-right: 24px;
+    }
+
+    &--home,
+    &--logout {
+      color: #262626;
+      width: 24px;
+    }
+
+    &--profile {
+      width: 37px;
+    }
+
+    &--logout {
+      width: 25px;
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+}

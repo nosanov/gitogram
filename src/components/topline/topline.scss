@@ -1,0 +1,14 @@
+.topline {
+  background-color: #fafafa;
+  border-bottom: 1px solid #c6c6c8;
+  padding: 45px 0 37px;
+
+  &__headline {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    margin-top: 45px;
+  }
+}

@@ -1,0 +1,26 @@
+.toggler {
+  $self: &;
+
+  color: #212121;
+  display: inline-flex;
+  align-items: center;
+
+  &__icon {
+    width: 10px;
+  }
+
+  &.active {
+    #{$self}__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__caption {
+    color: #292929;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+
+    margin-right: 5px;
+  }
+}
