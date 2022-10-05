@@ -109,6 +109,7 @@ export default {
   },
   methods: {
     handleUserStoryClick(id) {
+      // eslint-disable-next-line
       console.log(id);
     },
     toggleIssues(isOpened) {
