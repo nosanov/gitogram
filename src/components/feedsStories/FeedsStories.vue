@@ -30,3 +30,7 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+  @import "./feeds-stories";
+</style>

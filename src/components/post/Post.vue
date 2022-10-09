@@ -13,12 +13,6 @@
     <div class="post__topic">
       <slot name="topic" />
     </div>
-    <div
-      v-if="$slots.issues"
-      class="post__issues"
-    >
-      <slot name="issues" />
-    </div>
   </div>
 </template>
 

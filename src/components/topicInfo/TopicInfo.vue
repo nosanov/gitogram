@@ -1,7 +1,10 @@
 <template>
   <div class="topic-info">
     <div class="topic-info__section topic-info-section">
-      <button class="topic-info-section__button topic-info-section-button topic-info-section-button--star">
+      <button
+        @click="starClick"
+        class="topic-info-section__button topic-info-section-button topic-info-section-button--star"
+      >
         <div class="topic-info-section-button__icon">
           <Icon name="Star" />
         </div>
@@ -14,7 +17,10 @@
       </div>
     </div>
     <div class="topic-info__section topic-info-section">
-      <button class="topic-info-section__button topic-info-section-button topic-info-section-button--fork">
+      <button
+        @click="forkClick"
+        class="topic-info-section__button topic-info-section-button topic-info-section-button--fork"
+      >
         <div class="topic-info-section-button__icon">
           <Icon name="Fork" />
         </div>
@@ -45,6 +51,14 @@ export default {
     forkCount: {
       type: String,
       required: false,
+    },
+  },
+  methods: {
+    starClick() {
+      // 
+    },
+    forkClick() {
+      //
     },
   },
 }

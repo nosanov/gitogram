@@ -1,10 +1,13 @@
 import UserStory from "./UserStory.vue";
-import "./user-story.scss";
 
 export default {
   title: 'UserStory',
   component: { UserStory },
   argTypes: {
+    userStoryClick: {
+      action: 'userStoryClick',
+      description: 'Show user story on click'
+    },
     avatar: {
       control: {
         type: 'text'
@@ -34,8 +37,8 @@ const defaultTemplate = (args) => ({
   },
   template: `
     <UserStory
+      @userStoryClick="args.userStoryClick"
       v-bind="args"
-      class="user-story"
     />
   `
 });

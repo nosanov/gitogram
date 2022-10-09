@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   "stories": [
     // "../src/**/*.stories.mdx",
@@ -14,6 +16,10 @@ module.exports = {
     "builder": "@storybook/builder-webpack5"
   },
   webpackFinal: config => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@": path.resolve(__dirname, "../src"),
+    };
     config.module.rules.push({
       test: /.scss$/i,
       use: [
@@ -21,7 +27,7 @@ module.exports = {
         "css-loader",
         "sass-loader"
       ]
-    })
+    });
     return config;
   }
 }

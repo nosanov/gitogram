@@ -4,7 +4,7 @@
     href="/"
   >
     <img
-      src="@/assets/logo.svg"
+      src="./assets/logo.svg"
       alt="Gitogram /"
     >
   </a>
