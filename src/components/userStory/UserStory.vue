@@ -1,13 +1,13 @@
 <template>
   <button
     @click="$emit('userStoryClick')"
-    class="user-story"
+    :class="['user-story', {'user-story--viewed' : isStoryViewed}]"
   >
     <div class="user-story__avatar">
       <img
         :src="avatar"
+        :alt="username + '`s avatar'"
         class="user-story__img"
-        alt="username avatar"
       >
     </div>
     <div class="user-story__username">
@@ -27,6 +27,10 @@ export default {
     username: {
       type: String,
       required: true,
+    },
+    isStoryViewed: {
+      type: Boolean,
+      default: false,
     },
   },
 }
