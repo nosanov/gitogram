@@ -45,11 +45,11 @@ export default {
   },
   props: {
     starCount: {
-      type: String,
+      type: Number,
       required: false,
     },
     forkCount: {
-      type: String,
+      type: Number,
       required: false,
     },
   },

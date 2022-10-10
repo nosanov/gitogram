@@ -6,8 +6,8 @@
       class="feeds-stories__story"
     >
       <UserStory
-        :avatar="story.avatar"
-        :username="story.username"
+        :avatar="story.owner.avatar_url"
+        :username="story.owner.login"
         @userStoryClick="$emit('userStoryClick', story.id)"
       />
     </li>

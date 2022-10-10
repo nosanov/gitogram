@@ -8,13 +8,13 @@
       <template #content>
         <FeedsStories
           @userStoryClick="handleUserStoryClick"
-          :stories="stories"
+          :stories="trendings"
           class="feeds__stories"
         />
       </template>
     </Topline>
     <FeedsPosts
-      :posts="posts"
+      :posts="trendings"
       class="feeds__posts"
     />
   </div>
@@ -28,6 +28,7 @@ import { Logo } from "@/components/logo";
 import { Menu } from "@/components/menu";
 import stories from "./stories.json";
 import posts from "./posts.json"
+import * as api from "@/api";
 
 export default {
   name: "Feeds",
@@ -35,6 +36,7 @@ export default {
     return {
       stories,
       posts,
+      trendings: [],
     };
   },
   components: {
@@ -50,6 +52,14 @@ export default {
       console.log(id);
     },
   },
+  async created() {
+    try {
+      const {data} = await api.trendings.getTrendings();
+      this.trendings = data.items;
+    } catch(error) {
+      console.error(error);
+    }
+  }
 }
 </script>
 

@@ -14,12 +14,12 @@ export default {
     },
     starCount: {
       control: {
-        type: 'text'
+        type: 'number'
       }
     },
     forkCount: {
       control: {
-        type: 'text'
+        type: 'number'
       }
     },
   }
@@ -46,8 +46,8 @@ const defaultTemplate = (args) => ({
 export const defaultView = defaultTemplate.bind({});
 
 defaultView.args = {
-  starCount: "100",
-  forkCount: "50",
+  starCount: 100,
+  forkCount: 50,
 };
 
 defaultView.story = {
