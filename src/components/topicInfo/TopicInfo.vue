@@ -2,7 +2,7 @@
   <div class="topic-info">
     <div class="topic-info__section topic-info-section">
       <button
-        @click="starClick"
+        @click="$emit('starClick')"
         class="topic-info-section__button topic-info-section-button topic-info-section-button--star"
       >
         <div class="topic-info-section-button__icon">
@@ -18,7 +18,7 @@
     </div>
     <div class="topic-info__section topic-info-section">
       <button
-        @click="forkClick"
+        @click="$emit('forkClick')"
         class="topic-info-section__button topic-info-section-button topic-info-section-button--fork"
       >
         <div class="topic-info-section-button__icon">
@@ -51,14 +51,6 @@ export default {
     forkCount: {
       type: String,
       required: false,
-    },
-  },
-  methods: {
-    starClick() {
-      // 
-    },
-    forkClick() {
-      //
     },
   },
 }

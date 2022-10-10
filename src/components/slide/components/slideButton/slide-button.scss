@@ -1,0 +1,24 @@
+.slide-button {
+  background-color: #31AE54;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px 108px;
+
+  transition: background-color .275 ease-in-out;
+
+  height: 44px;
+
+  &:hover {
+    background-color: #9E9E9E;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
