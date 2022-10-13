@@ -1,4 +1,6 @@
 import Slide from "./Slide.vue";
+import SlideHeader from "./components/slideHeader/SlideHeader.vue";
+import SlideButton from "./components/slideButton/SlideButton.vue";
 
 export default {
   title: 'Slide',
@@ -24,7 +26,7 @@ export default {
 
 const defaultTemplate = (args) => ({
   components: {
-    Slide
+    Slide,
   },
   data() {
     return {
@@ -55,5 +57,49 @@ defaultView.args = {
 };
 
 defaultView.story = {
-  name: 'Стандартный вид'
+  name: 'Пустой вид'
+};
+
+const fullTemplate = (args) => ({
+  components: {
+    Slide,
+    SlideHeader,
+    SlideButton,
+  },
+  data() {
+    return {
+      args,
+    };
+  },
+  template: `
+    <Slide>
+      <template #title>
+        <SlideHeader
+          :avatar="args.avatar"
+          :topicTitle="args.title"
+        />
+      </template>
+      <template #content>
+        {{ args.content }}
+      </template>
+      <template #footer>
+        <SlideButton>
+          {{ args.footerButton }}
+        </SlideButton>
+      </template>
+    </Slide>
+  `
+});
+
+export const fullView = fullTemplate.bind({});
+
+fullView.args = {
+  avatar: 'https://picsum.photos/200/300',
+  title: 'Title content here',
+  content: 'The easiest way to get .NET 6 Preview 4 is to install the maui-check dotnet tool from CLI and follow the instructions.',
+  footerButton: 'Follow',
+};
+
+fullView.story = {
+  name: 'Заполненный вид'
 };
