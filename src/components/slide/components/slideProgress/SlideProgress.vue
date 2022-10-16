@@ -1,5 +1,5 @@
 <template>
-  <div :class="['slide-progress', {'slide-progress--active': isActive}]">
+  <div :class="['slide-progress', {'slide-progress--active': shouldRunAnimation}]">
     <div ref="progress" class="slide-progress__inner"></div>
   </div>
 </template>
@@ -7,9 +7,15 @@
 <script>
 export default {
   name: 'SlideProgress',
+  props: {
+    isActive: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
-      isActive: false,
+      shouldRunAnimation: false,
     };
   },
   methods: {
@@ -20,7 +26,7 @@ export default {
   mounted() {
     this.$nextTick(() => {
       setTimeout(() => {
-        this.isActive = true;
+        this.isActive ? this.shouldRunAnimation = true : this.shouldRunAnimation = false;
       }, 500);
     });
 

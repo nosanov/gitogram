@@ -1,0 +1,19 @@
+.stories {
+  background: #101010;
+  height: 100vh;
+
+  &__topline {
+    margin-bottom: 90px;
+  }
+}
+
+.stories-topline {
+  &__logo,
+  &__close {
+    color: #fff;
+  }
+
+  &__close {
+    width: 23px;
+  }
+}

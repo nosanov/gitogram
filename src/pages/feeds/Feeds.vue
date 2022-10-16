@@ -2,7 +2,7 @@
   <div class="feeds">
     <Topline class="feeds__topline feeds-topline">
       <template #headline>
-        <Logo />
+        <Logo class="feeds-topline__logo" />
         <Menu />
       </template>
       <template #content>
@@ -30,6 +30,8 @@ import stories from "./stories.json";
 import posts from "./posts.json"
 import * as api from "@/api";
 
+import { mapState, mapActions } from 'vuex';
+
 export default {
   name: "Feeds",
   data() {
@@ -46,11 +48,19 @@ export default {
     Logo,
     Menu,
   },
+  computed: {
+    ...mapState({
+      // trendings: state => state.trendings.data
+    }),
+  },
   methods: {
     handleUserStoryClick(id) {
       // eslint-disable-next-line
       console.log(id);
     },
+    ...mapActions({
+      fetchTrendings: 'trendings/fetchTrendings'
+    }),
   },
   async created() {
     try {
@@ -59,6 +69,7 @@ export default {
     } catch(error) {
       console.error(error);
     }
+    // await this.fetchTrendings();
   }
 }
 </script>

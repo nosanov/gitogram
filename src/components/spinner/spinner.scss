@@ -1,0 +1,13 @@
+@keyframes rotate {
+  from {
+    transorm: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: rotate 2s linear infinite;
+}
