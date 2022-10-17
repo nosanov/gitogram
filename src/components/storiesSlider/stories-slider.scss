@@ -1,6 +1,15 @@
 .stories-slider {
+  &__list {
+    display: flex;
+    align-items: center;
+
+    transition: transform .4s ease-in-out;
+    will-change: transform;
+  }
+
   &__slide {
     border-radius: 8px;
     max-width: 375px;
+    width: 100vw;
   }
 }

@@ -7,7 +7,7 @@
       </template>
       <template #content>
         <FeedsStories
-          @userStoryClick="handleUserStoryClick"
+          @userStoryClick="$router.push({name: 'stories', params: {slide: id}})"
           :stories="trendings"
           class="feeds__stories"
         />

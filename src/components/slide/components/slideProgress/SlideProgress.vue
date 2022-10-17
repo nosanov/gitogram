@@ -31,6 +31,7 @@ export default {
     });
 
     this.$refs.progress.addEventListener('transitionend', this.emitOnFinish);
+    console.log(this.$refs.progress);
   },
   beforeUnmount() {
     this.$refs.progress.removeEventListener('transitionend', this.emitOnFinish);

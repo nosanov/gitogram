@@ -19,7 +19,10 @@
       </template>
     </Topline>
     <div class="stories__content">
-      <StoriesSlider class="stories__slider" />
+      <StoriesSlider
+        :slide="Number($route.params.slide)"
+        class="stories__slider"
+      />
     </div>
   </div>
 </template>

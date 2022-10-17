@@ -5,8 +5,8 @@
       :alt="avatar + '`s image'"
       class="slide-header__img"
     />
-    <span class="slide-header__topic">
-      {{ topicTitle }}
+    <span class="slide-header__name">
+      {{ name }}
     </span>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
       type: String,
       required: true,
     },
-    topicTitle: {
+    name: {
       type: String,
       required: true,
     },

@@ -1,9 +1,23 @@
 .stories {
   background: #101010;
+
   height: 100vh;
 
   &__topline {
     margin-bottom: 90px;
+  }
+
+  &__content {
+    position: relative;
+    height: 668px;
+  }
+
+  &__slider {
+    position: absolute;
+    left: 50%;
+
+    margin-left: -188px;
+    transition: transform .4s ease-in-out;
   }
 }
 
