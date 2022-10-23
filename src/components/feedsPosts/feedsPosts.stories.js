@@ -32,12 +32,15 @@ defaultView.args = {
   posts: [
     {
       "id": "0",
-      "username": "joshua_l",
+      "owner": {
+        "login": "joshua_l",
+        "avatar_url": "https://picsum.photos/200/300"
+      },
       "avatar": "https://picsum.photos/200/300",
-      "title": "Vue.js",
+      "name": "Vue.js",
       "description": "<b>JavaScript</b> framework for building interactive web applications ⚡",
-      "star": "156k",
-      "fork": "4",
+      "stargazers_count": "156",
+      "forks_count": "4",
       "issues": [
         {
           "id": "0",
@@ -55,18 +58,23 @@ defaultView.args = {
           "message": "transition-group with flex parent causes removed items to fly"
         }
       ],
-      "date": "15 may"
+      "open_issues_count": "2",
+      "created_at": "15 may"
     },
     {
       "id": "1",
+      "owner": {
+        "login": "Camille",
+        "avatar_url": "https://picsum.photos/200/400"
+      },
       "username": "Camille",
       "avatar": "https://picsum.photos/200/400",
-      "title": "React.js",
+      "name": "React.js",
       "description": "<b>Open source</b> JavaScript library used for designing user interfaces",
-      "star": "156k",
-      "fork": "4",
-      "issues": [],
-      "date": "15 may"
+      "stargazers_count": "156",
+      "forks_count": "4",
+      "open_issues_count": "",
+      "created_at": "15 may"
     }
   ],
 };

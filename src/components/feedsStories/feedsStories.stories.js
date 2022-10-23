@@ -32,18 +32,24 @@ defaultView.args = {
   stories: [
     {
     "id": 0,
-    "avatar": "https://picsum.photos/200/300",
-    "username": "Alex"
+    "owner": {
+      "avatar_url": "https://picsum.photos/200/300",
+      "login": "Alex"
+    },
     },
     {
       "id": 1,
-      "avatar": "https://picsum.photos/200/400",
-      "username": "Mike"
+      "owner": {
+        "avatar_url": "https://picsum.photos/200/400",
+        "login": "Mike"
+      },
     },
     {
       "id": 2,
-      "avatar": "https://picsum.photos/200/500",
-      "username": "Bob"
+      "owner": {
+        "avatar_url": "https://picsum.photos/200/500",
+        "login": "Bob"
+      },
     }]
 };
 

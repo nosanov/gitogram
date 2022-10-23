@@ -7,3 +7,4 @@ export {default as Triangle} from './Triangle.vue';
 export {default as Close} from './Close.vue';
 export {default as Spinner} from './Spinner.vue';
 export {default as Arrow} from './Arrow.vue';
+export {default as Github} from './Github.vue';
