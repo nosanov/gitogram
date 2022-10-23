@@ -8,7 +8,7 @@
       <UserStory
         :avatar="story.owner.avatar_url"
         :username="story.owner.login"
-        @userStoryClick="$emit('userStoryClick', story.id)"
+        @userStoryClick="$router.push({name: 'stories', params: {slide: story.id}})"
       />
     </li>
   </ul>

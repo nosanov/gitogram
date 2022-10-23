@@ -113,14 +113,14 @@ export default {
     },
   },
   async mounted() {
-    if (this.slide) {
+    await this.fetchTrendings();
+    await this.loadReadme();
+
+    if (this.slide && this.trendings.length) {
       const index = this.trendings.findIndex((item) => item.id === this.slide);
 
       await this.handleSlide(index);
     }
-
-    await this.fetchTrendings();
-    await this.loadReadme();
   }
 }
 </script>

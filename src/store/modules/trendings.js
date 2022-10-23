@@ -6,6 +6,9 @@ export default {
     data: [],
   },
   getters: {
+    getItemsCount: (state) => {
+      return state.data.length;
+    },
     getRepoById: (state) => (id) => {
       return state.data.find(item => item.id === id);
     },
@@ -24,7 +27,10 @@ export default {
     },
   },
   actions: {
-    async fetchTrendings({ commit }) {
+    async fetchTrendings({commit, getters}) {
+      const itemsCount = getters.getItemsCount;
+
+      if (itemsCount !== 0) return;
 
       try {
         const { data } = await api.trendings.getTrendings();
